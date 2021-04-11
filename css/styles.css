@@ -1,37 +1,38 @@
 /*
 Colors used
-Background Color (Pastel Purple): #E0E0FF
-Text Color (Dark Purple): #382B64;
-UNUSED: Alt Text Color (Magic Purple):  #7B64C0;
+Background Color (Pastel Purple): #e0e0ff
+Text Color (Dark Purple): #382b64;
+UNUSED: Alt Text Color (Magic Purple):  #7b64c0;
 Link Color (Green): #357b70
 Link Color VISITED (Green DARKER): #05676e
 Link Color ACTIVE (Green LIGHTER): #489c79
 UNUSED: Default Button Color (Mustard): #e0b354;
-UNUSED: Secondary Button Color (Orange): #FFA448
-Border Color (Orange): #FF8542
+UNUSED: Secondary Button Color (Orange): #ffa448
+Border Color (Orange): #ff8542
 Grid Color (Light Blue): #a2d2ff
 Animation fill yellow: #fcffad;
-Animation fill orange: #F7732B;
-Animation fill red: #F73F1F;
+Animation fill orange: #f7732b;
+Animation fill red: #f73f1f;
 */
-/*/////STYLES/////*/
+
+/* /////STYLES///// */
 :root {
-  --bgcolor: #E0E0FF;
-  --textcolor: #382B64;
+  --bgcolor: #e0e0ff;
+  --textcolor: #382b64;
   --linkcolor: #357b70;
   --linkcolor2: #489c79;
-  --bordercolor: #FF8542;
+  --bordercolor: #ff8542;
   --grid-color: #a2d2ff;
   --animationfill: #fcffad;
-  --animationfill2: #F7732B;
-  --animationfill3: #F73F1F;
+  --animationfill2: #f7732b;
+  --animationfill3: #f73f1f;
   --font: "Bitter", serif;
-  --weight: 700px;
+  --weight: 700;
 }
 
 body {
   background-color: var(--bgcolor);
-  color:  var(--textcolor);
+  color: var(--textcolor);
   font-family: var(--font);
   font-weight: 400;
   font-size: 16px;
@@ -59,8 +60,9 @@ h3 {
   font-weight: var(--weight);
 }
 
-/*/////LINKS/////*/
-a, a:active {
+/* /////LINKS///// */
+a,
+a:active {
   color: var(--linkcolor);
 }
 
@@ -68,11 +70,12 @@ a:visited {
   color: var(--linkcolor2);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
-/*/////HEADER/////*/
+/* /////HEADER///// */
 .page-header {
   display: flex;
   width: 100%;
@@ -90,7 +93,7 @@ a:hover, a:focus {
   text-align: right;
 }
 
-/*/////NAVIGATION/////*/
+/* /////NAVIGATION///// */
 .navigation-list {
   list-style-type: none;
 }
@@ -104,7 +107,7 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-/*/////HOME PAGE/////*/
+/* /////HOME PAGE///// */
 .profile {
   max-width: 700px;
   margin: 0 auto;
@@ -117,8 +120,9 @@ a:hover, a:focus {
   border-radius: 50%;
 }
 
-/*//////ABOUT PAGE/////*/
-button, .button {
+/* //////ABOUT PAGE///// */
+button,
+.button {
   border: none;
   display: inline-block;
   font-family: inherit;
@@ -131,7 +135,10 @@ button, .button {
   transition: 0.2s opacity;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -143,7 +150,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 */
 
-/*/////WORK PAGE/////*/
+/* /////WORK PAGE///// */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -154,7 +161,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   background-color: var(--grid-color);
 }
 
-/*/////FOOTER/////*/
+/* /////FOOTER///// */
 .page-footer {
   clear: both;
   display: flex;
@@ -162,18 +169,21 @@ button:hover, button:focus, .button:hover, .button:focus {
   text-align: center;
 }
 
-/*/////ANIMATIONS/////*/
+/* /////ANIMATIONS///// */
 @keyframes color-change {
   0% {
     fill: var(--animationfill);
   }
+
   50% {
     fill: var(--animationfill2);
   }
+
   100% {
     fill: var(--animationfill3);
   }
 }
+
 .sun {
   animation: 5s color-change infinite alternate linear;
 }
@@ -182,10 +192,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
 }
+
 .cloud-front {
   animation: 32s cloud-move infinite alternate linear;
 }
@@ -194,33 +206,39 @@ button:hover, button:focus, .button:hover, .button:focus {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
 }
+
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-/*/////MEDIA QUERIES/////*/
+/* /////MEDIA QUERIES///// */
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
