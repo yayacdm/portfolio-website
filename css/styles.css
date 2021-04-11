@@ -161,6 +161,26 @@ button:focus,
   background-color: var(--grid-color);
 }
 
+/* /////CONTACT PAGE///// */
+
+.standard-label {
+  margin-right: 10px;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: none;
+  padding: 10px;
+}
+
+#contact-form {
+  padding: 9px;
+  width: 200px;
+  text-align: left;
+}
+
 /* /////FOOTER///// */
 .page-footer {
   clear: both;

@@ -162,6 +162,27 @@ button:focus,
   background-color: #a2d2ff;
 }
 
+/* /////CONTACT PAGE///// */
+
+.standard-label {
+  margin-right: 10px;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  border: none;
+  padding: 10px;
+}
+
+#contact-form {
+  padding: 9px;
+  width: 200px;
+  text-align: left;
+}
+
 /* /////FOOTER///// */
 .page-footer {
   clear: both;
